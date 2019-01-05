@@ -16,15 +16,15 @@ logback ding ding appender
 ```
 ### asynchronous appender
 ```xml
-<appender name="ding" class="ch.qos.logback.classic.AsyncAppender">
-    <appender-ref>
-        <appender class="com.github.bpazy.dingappender.DingAppender">
-            <accessToken>your_dingding_bot_access_token</accessToken>
-        </appender>
-    </appender-ref>
+<appender name="ding" class="com.github.bpazy.dingappender.DingAppender">
+    <accessToken>your_dingding_bot_access_token</accessToken>
+</appender>
+
+<appender name="asyncDing" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="ding"/>
 </appender>
 
 <root level="ERROR">
-    <appender-ref ref="ding"/>
+    <appender-ref ref="asyncDing"/>
 </root>
 ```

@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="ding" class="com.github.bpazy.dingappender.DingAppender">
+        <accessToken>your_dingding_bot_access_token</accessToken>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <appender name="asyncDing" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="ding"/>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="asyncDing"/>
+    </root>
+</configuration>
