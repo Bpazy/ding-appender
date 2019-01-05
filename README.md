@@ -1,8 +1,10 @@
-## ding-appender
+# ding-appender
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.bpazy/ding-appender/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.bpazy/ding-appender)
+
 logback ding ding appender
 
-### Usage
-#### synchronous appender
+## Usage
+### synchronous appender
 ```xml
 <appender name="ding" class="com.github.bpazy.dingappender.DingAppender">
     <accessToken>your_dingding_bot_access_token</accessToken>
@@ -12,7 +14,7 @@ logback ding ding appender
     <appender-ref ref="ding"/>
 </root>
 ```
-#### asynchronous appender
+### asynchronous appender
 ```xml
 <appender name="ding" class="ch.qos.logback.classic.AsyncAppender">
     <appender-ref>
