@@ -1,9 +1,11 @@
 # ding-appender
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.bpazy/ding-appender/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.bpazy/ding-appender)
 
-logback ding ding appender
+Logback ding ding appender which send your log to your dingding group. Just like SMTPAppender send log to email.
 
 ## Usage
+1. Create your group then add a bot and remember bot's access token.
+2. Fill the logback.xml with the access token.
 ### synchronous appender
 ```xml
 <appender name="ding" class="com.github.bpazy.dingappender.DingAppender">
