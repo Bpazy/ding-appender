@@ -34,7 +34,7 @@ public class DingAppender extends AppenderBase<ILoggingEvent> {
     protected void append(ILoggingEvent eventObject) {
         HttpPost httpPost = new HttpPost(url);
         httpPost.setHeader("Content-type", "application/json");
-        httpPost.setEntity(new StringEntity(gson.toJson(DingMessage.defaultMessage(eventObject.getMessage())), "UTF8"));
+        httpPost.setEntity(new StringEntity(gson.toJson(DingMessage.defaultMessage(eventObject.getFormattedMessage())), "UTF8"));
         client.execute(httpPost);
     }
 }
