@@ -10,6 +10,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 /**
  * @author ziyuan
@@ -35,6 +36,6 @@ public class DingAppender extends AppenderBase<ILoggingEvent> {
         HttpPost httpPost = new HttpPost(url);
         httpPost.setHeader("Content-type", "application/json");
         httpPost.setEntity(new StringEntity(gson.toJson(DingMessage.defaultMessage(eventObject.getFormattedMessage())), "UTF8"));
-        client.execute(httpPost);
+        EntityUtils.consume(client.execute(httpPost).getEntity());
     }
 }
