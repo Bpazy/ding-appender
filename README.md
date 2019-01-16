@@ -1,6 +1,7 @@
 # ding-appender
 ![Maven](https://img.shields.io/maven-central/v/com.github.bpazy/ding-appender.svg)
 [![Build Status](https://travis-ci.com/Bpazy/ding-appender.svg?branch=master)](https://travis-ci.com/Bpazy/ding-appender)
+[![codecov](https://codecov.io/gh/Bpazy/ding-appender/branch/master/graph/badge.svg)](https://codecov.io/gh/Bpazy/ding-appender)
 
 Logback ding ding appender which send your log to your dingding group. Just like SMTPAppender send log to email.
 
